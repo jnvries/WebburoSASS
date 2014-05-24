@@ -1,0 +1,113 @@
+input {
+			//border-radius: 15px;
+			//-moz-border-radius: 15px;
+			//-webkit-border-radius: 15px;
+			border: 1px solid #dbdbdb;
+			padding: 8px 10px 6px 35px;
+			margin: 5px 0;
+			background-repeat: no-repeat;
+			background-position: 10px center;
+		}
+
+#main {
+	
+form {
+	border-top: 1px solid #dbdbdb;
+	margin-bottom: 0 !important;
+	overflow: hidden;
+}
+	
+	table {
+		width: 100%;
+		margin-bottom: 10px;
+	}      
+            
+            form tr:nth-child(2n+2){
+                        background-color: #f2f2f2;
+            } 
+            
+            form tr:last-child td:last-child{
+                        padding: 14px 0;
+            }
+
+		form td, tr {
+			border: none;
+		}
+		
+		 form tr td:first-child {
+			width: 33%;
+            padding: 14px 0 14px 14px;
+			display: inline-block;
+			@include box-sizing(border-box);
+		}
+		
+		form tr td:last-child {
+			width: 66%;
+			padding: 14px 14px 14px 0;
+			display: inline-block;
+			@include box-sizing(border-box);
+		}
+		
+			 form tr:last-child td {
+				float: right;
+                width: 62.7%;
+			}
+		
+		 form tr {
+			width: 100%;
+		}
+			
+			.form_td_1 {
+				padding-left: 20px;
+			}
+			
+			input {
+				padding-left: 15px;
+				width: 100%;
+				@include box-sizing(border-box);
+				border: 1px solid #dbdbdb;
+			}
+				
+				 input[type="radio"] {
+					@include box-shadow(inset 0px 0px 0px);
+					width: 10%;
+					border: none;
+				}
+				
+				 input[type="submit"] {
+					color: #fff;
+					@include futura;
+					text-transform: lowercase;
+					float: right;
+					padding: 15px 21px 12px;
+					margin: 10px 0;
+					cursor: pointer;
+					@include box-shadow(none);
+					border: none;
+					background-color: $green;
+				}
+				
+				input[type="checkbox"] {
+					border: none;
+					@include box-shadow(none);
+					width: 10%;
+				}
+			
+				input[type="file"] {
+					@include box-shadow(none);
+					padding-left: 0;
+					width: 100%;
+					border: none;
+				}
+			
+				 textarea {
+					padding-left: 15px;
+					resize: none;
+                    border: 1px solid #dbdbdb;
+					height: 120px;
+					width: 100%;
+					@include box-sizing(border-box);
+					overflow: hidden;
+					//border-radius: 15px;
+					}
+				 }

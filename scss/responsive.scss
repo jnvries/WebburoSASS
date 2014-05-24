@@ -1,0 +1,395 @@
+/* INCLUDES --------------------------------------------------------------------- */
+//    cd ../../Volumes/Webburo/revalidati/public_html/
+
+@import 'compass/css3';
+@import '_variables';
+@import '_mixins';
+@import '_fonts';
+
+/* 1024 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 1160px) {
+    
+    .container {
+		max-width: 960px;
+	}
+	
+	#logo {
+		width: 100px;
+	}
+	
+	ul.flexnav, .phone {
+		font-size: em(16);
+		
+		li {
+			margin: 18px 0 17px;
+		}
+	}
+	
+	.caption {
+		right: 20px;
+	}
+	
+	.block-content {
+		padding: 40px 20px;
+	}
+	
+		h1, h2 {
+			font-size: em(22);
+		}
+	
+		p, li {
+			font-size: em(15);
+		}
+		
+		.button a {
+			font-size: em(20);
+		}
+    
+}
+
+/* 800 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 1023px) {
+   
+    .container {
+		max-width: 740px;
+	}
+	
+	ul.flexnav li {
+		padding: 8px 8px;
+	}
+	
+	.phone {
+		float: right;
+		margin: 0;
+	}
+	
+	.caption {
+		font-size: em(20) !important;
+		width: 300px !important;
+		height: 100px !important;
+	}
+	
+	.block-content {
+		padding: 40px 40px;
+		
+	}
+	
+		h1, h2 {
+			line-height: 1.5em;
+		}
+		
+		footer li {
+			&:nth-child(3), &:nth-child(4) {
+				display: none;
+			}
+		}
+		
+		.col_right {
+			display: none;
+		}
+		
+		.col_left {
+			width: 100%;
+			text-align: center;
+			
+			li {
+				text-align: left;
+			}
+		}
+		
+    
+}
+
+@media screen and (max-width: 1023px) and (min-width: 767px) {
+		
+	#blocks > div {
+		height: 520px;
+	}
+	
+		.button a {
+			line-height: 1em;
+			padding-left: 95px;
+			padding-right: 20px;
+		}
+	
+	.block-content li {
+		padding-left: 60 / 290 * 100%;
+		line-height: 1.8em;
+		margin-top: 10px;
+		
+		&:before {
+			top: 10px;
+		}
+		
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	#blocks.standaard {
+			h2 {
+				margin-bottom: 20px;
+			}
+			
+			p {
+				display: none;
+			}
+		}
+}
+
+/* 768 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 799px) {
+    
+   .container {
+		max-width: 710px;
+	}
+	
+	ul.flexnav {
+		font-size: em(15);
+		
+		li {
+			padding: 9px 9px 8px;
+		}
+	}
+    
+	input, textarea {
+		font-size: em(13);
+	}
+	
+}
+
+/* 600 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+    
+   .container, .flexnav li a {
+		max-width: 550px;
+	}
+	
+	#blocks > div, #info-blocks > div {
+		float: none;
+		width: 100%;
+		
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	#info-blocks > div:last-child {
+		padding-top: 0;
+	}
+	
+	.pink {
+		margin-bottom: 30px;
+	}
+	
+	.caption {
+		font-size: 1em !important;
+		width: 235px !important;
+		height: 83px !important;
+	}
+	
+	footer li:nth-child(2) {
+		display: none;
+	}
+	
+	
+	#logo {
+		padding: 12px 0 0 0;
+		width: 80px;
+		
+		img {
+			margin-left: 0 !important;
+			height: 70px;
+		}
+	}
+	
+	.flex {
+		float: right;
+		width: 470px
+	}
+    
+    
+}
+
+/* 533 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 599px) {
+    
+   .container, .flexnav li a {
+		max-width: 470px;
+	}
+	
+	.caption {
+		display: none;
+	}
+	
+	h1, h2 {
+		font-size: em(21);
+	}
+	
+	#blocks > div {
+		height: 380px;
+	}
+	
+	.block-content {
+		padding: 40px 30px;
+		font-size: em(15);
+	}
+	
+	#main {
+		margin: 40px 20px;
+	}
+	
+	.flex {
+		width: 390px;
+	}
+}
+
+/* 480 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 532px) {
+    
+   .container, .flexnav li a {
+		max-width: 420px;
+	}
+	
+	#info-blocks .block-content {
+		padding: 40px 20px;
+	}
+	
+	#blocks > div {
+		height: 420px;
+	}
+	
+	#blocks > div:nth-child(2) {
+		height: 470px;
+	}
+	
+		.button a {
+			line-height: 1em;
+			padding-left: 95px;
+			padding-right: 20px;
+		}
+	
+	.block-content li {
+		padding-left: 60 / 290 * 100%;
+		line-height: 1.8em;
+		margin-top: 10px;
+		
+		&:before {
+			top: 10px;
+		}
+		
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	#blocks.standaard>div {
+		height: 440px !important;
+	}
+	
+	.flex {
+		width: 340px;
+	}
+    
+}
+
+/* 360 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 479px) {
+    
+   .container, .flexnav li a {
+		max-width: 300px;
+	}
+	
+	#blocks > div {
+		height: 510px;
+	}
+	
+	#blocks > div:nth-child(2) {
+		height: 500px;
+	}
+	
+	.button a {
+		font-size: em(17);
+		line-height: em(20,17);
+	}
+	
+	#info-blocks .block-content:nth-child(2) p {
+		padding-left: 0;
+		padding-top: 150px;
+		text-align: center;
+		
+		&:before {
+			width: 124px;
+			top: 0;
+			left: 25%;
+		}
+	}
+	
+	footer li:last-child {
+		display: none;
+	}
+	
+	#blocks.standaard>div {
+		height: 470px !important;
+	}
+	
+	input, textarea {
+		padding: 12px 14px 9px;
+	}
+	
+	.flex {
+		width: 220px;
+	}
+    
+}
+
+/* 320 PX --------------------------------------------------------------------- */
+
+@media screen and (max-width: 359px) {
+    
+   .container, .flexnav li a {
+		max-width: 270px;
+	}
+	
+	#blocks > div {
+		height: 550px;
+	}
+	
+	#blocks > div:nth-child(2) {
+		height: 600px;
+	}
+	
+	.button a {
+		padding-left: 20px;
+		
+		&:before, &:after, span:before {
+			display: none;
+		}
+	}
+	
+	input, textarea {
+		float: none !important;
+		width: 100% !important;
+	}
+	
+	#blocks.standaard>div.pink {
+		height: 500px !important;
+	}
+	.flex {
+		width: 190px;
+	}
+    
+}
+
+@media screen and (max-height: 400px) {
+	nav#menu {
+		position: absolute;
+	}
+}

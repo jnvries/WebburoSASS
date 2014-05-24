@@ -1,0 +1,273 @@
+/* INCLUDES --------------------------------------------------------------------- */
+//    cd ../../Volumes/Webburo/revalidati/public_html/
+
+@import 'compass/css3';
+@import '_reset';
+@import '_variables';
+@import '_mixins';
+@import '_fonts';
+@import '_form';
+
+/* Flexnav Base Styles */
+.flexnav {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%; }
+  .flexnav.flexnav-show {
+    max-height: 2000px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+  .flexnav.one-page {
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    max-width: 200px; }
+  .flexnav li {
+    position: relative;
+    overflow: hidden; }
+  .flexnav li ul {
+    width: 100%; }
+    .flexnav li ul li {
+      position: relative;
+      overflow: hidden; }
+  .flexnav li ul.flexnav-show li {
+    overflow: visible; }
+  .flexnav li ul li a {
+    display: block;
+    background: #f7f7f7; }
+  .flexnav ul li ul li a {
+    background: #bfbfbc; }
+  .flexnav ul li ul li ul li a {
+    background: #cbcbc9; }
+  .flexnav .touch-button {
+    position: absolute;
+    background-color: #5d5d5d;
+    z-index: 999;
+    top: -23px;
+  right: 13px;
+    display: inline-block;
+    text-align: center; }
+    .flexnav .touch-button:hover {
+      cursor: pointer; }
+    .flexnav .touch-button .navicon {
+      position: relative;
+      top: 1.9em;
+ }
+
+.menu-button {
+  position: relative;
+  display: block;
+  padding: 18px 30px 13px;
+  cursor: pointer; }
+  .menu-button.one-page {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    padding-right: 45px; }
+    
+  .menu-button .touch-button {
+    background: #5d5d5d;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    display: inline-block;
+    text-align: center; }
+    
+    .menu-button .touch-button .navicon {
+      position: relative;
+      top: 1em;
+ }
+
+@media all and (max-width: 767px) {
+    
+.flexnav.with-js.opacity.flexnav-show .flexnav-show li a {
+  padding: 10px 10px 10px 60px !important;
+ }
+ 
+ .flexnav {
+  max-height: 0;
+  position: absolute !important;
+  width: 100% !important;
+  left: 0 !important;
+  z-index: 99;
+  
+  li:first-child {
+    border-top: 1px solid #e6e6e6;
+  }
+ }
+ 
+ .flexnav-show {
+  @include transition(all 0.5s ease-in-out);  
+
+    
+      &:after {
+		bottom: 0;
+	}
+
+ }
+ 
+ .flexnav {
+    float: none !important;
+    @include transition(all 0.5s ease-in-out);
+    
+    li {
+      @include box-sizing(border-box);
+      padding: 0 !important;
+      margin: 0 !important;
+      background-color: $grey1;
+      
+      a {
+        height: 100%;
+        padding: 16px 10px 13px;
+        margin: 0 auto;
+      }
+    }
+ }
+
+nav#menu {
+  width: 100% !important;
+}
+  
+nav#menu li {
+    width: 100%;
+    float: none;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  nav#menu ul {
+      margin: 0 !important;
+  }
+
+    nav#menu li a {
+      border-right: none !important;
+      display: block !important;
+    }
+     
+     .flexnav.with-js.opacity.flexnav-show .flexnav-show li a {
+      border-bottom: none !important;
+      width: 100%;
+      
+     }
+     
+    .flexnav.with-js.opacity.flexnav-show .flexnav-show li {
+      width: 100% !important;
+      float: right !important;
+      padding: 5px 0px 5px 5px !important;
+      border-bottom: 1px solid #e6e6e6 !important;
+    }
+    
+    .flexnav.with-js.opacity.flexnav-show .flexnav-show li:last-child {
+      border: none !important;
+    }
+    
+      nav#menu li a {
+        font-size: 1em !important;
+      }
+      
+      li.item-with-ul .flexnav-show {
+        border-top: 1px solid #e6e6e6 !important;
+      }
+
+}
+
+@media all and (min-width: 768px) {
+    
+  .on.item-with-ul .touch-button, .item-with-ul .touch-button {
+    display: none;
+  }
+    
+  .flexnav {
+    overflow: visible; }
+    .flexnav.one-page {
+      top: 0;
+      right: auto;
+      max-width: 1080px; }
+    .flexnav li > ul {
+      position: absolute;
+      top: auto;
+      left: 0; }
+      .flexnav li > ul li {
+        width: 100%; }
+    .flexnav li ul li > ul {
+      margin-left: 100%;
+      top: 0; }
+    .flexnav li ul li a {
+      border-bottom: none; }
+    .flexnav li ul.open {
+      display: block;
+      visibility: visible;
+      z-index: 1; }
+      .flexnav li ul.open li {
+        overflow: visible;
+        max-height: 100px; }
+      .flexnav li ul.open ul.open {
+        margin-left: 100%;
+        top: 0; }
+
+  .menu-button {
+    display: none; } }
+.oldie body.one-page {
+  padding-top: 70px; }
+.oldie .flexnav {
+  overflow: visible; }
+  .oldie .flexnav.one-page {
+    top: 0;
+    right: auto;
+    max-width: 1080px; }
+  .oldie .flexnav li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    width: 20%;
+    min-height: 50px;
+    overflow: visible; }
+  .oldie .flexnav li:hover > ul {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li:hover > ul li {
+      width: 100%;
+      float: none; }
+  .oldie .flexnav li a {
+    border-left: 1px solid #acaca1;
+    border-bottom: none;
+    overflow: visible; }
+  .oldie .flexnav li > ul {
+    background: #acaca1;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: none;
+    z-index: 1;
+    overflow: visible; }
+  .oldie .flexnav li ul li ul {
+    top: 0; }
+  .oldie .flexnav li ul li a {
+    border-bottom: none; }
+  .oldie .flexnav li ul.open {
+    display: block;
+    width: 100%;
+    overflow: visible; }
+    .oldie .flexnav li ul.open li {
+      width: 100%; }
+    .oldie .flexnav li ul.open ul.open {
+      margin-left: 100%;
+      top: 0;
+      display: block;
+      width: 100%;
+      overflow: visible; }
+  .oldie .flexnav ul li:hover ul {
+    margin-left: 100%;
+    top: 0; }
+.oldie .menu-button {
+  display: none; }
+.oldie.ie7 .flexnav li {
+  width: 19.9%; }
